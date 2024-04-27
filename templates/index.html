@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </style>
+</head>
+<body >
+      
+    <div id="particles-js"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">BRAIN STROKE PREDICTION</a></li>
+                <li><a href="#">BY SHOBIT GUPTA - 60009220032</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h1 >Brain Stroke Prediction</h1>
+            <form action="/predict" method="post">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br><br>
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" required><br><br>
+                <label for="hypertension">Hypertension:</label>
+                <select name="hypertension" id="hypertension" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+                <label for="heart_disease">Heart Disease:</label>
+                <select name="heart_disease" id="heart_disease" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+                <label for="ever_married">Ever Married:</label>
+                <select name="ever_married" id="ever_married" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select><br><br>
+                <label for="work_type">Work Type:</label>
+                <select name="work_type" id="work_type" required>
+                    <option value="Private">Private</option>
+                    <option value="Self-employed">Self-employed</option>
+                    <option value="Govt_job">Govt job</option>
+                    <option value="children">Children</option>
+                    <option value="Never_worked">Never worked</option>
+                </select><br><br>
+                <label for="avg_glucose_level">Avg Glucose Level:</label>
+                <input type="number" name="avg_glucose_level" id="avg_glucose_level" required><br><br>
+                <label for="bmi">BMI:</label>
+                <input type="number" name="bmi" id="bmi" required><br><br>
+                <label for="smoking_status">Smoking Status:</label>
+                <select name="smoking_status" id="smoking_status" required>
+                    <option value="formerly smoked">Formerly Smoked</option>
+                    <option value="never smoked">Never Smoked</option>
+                    <option value="smokes">Smokes</option>
+                    <option value="Unknown">Unknown</option>
+                </select><br><br>
+                <input class="btn btn-secondary" type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Stroke Prediction. All rights reserved.</p>
+    </footer>
+
+  <!-- Include particles.js library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Particles.js configuration -->
+  <script>
+      particlesJS('particles-js', {
+          "particles": {
+              "number": {
+                  "value": 80,
+                  "density": {
+                      "enable": true,
+                      "value_area": 800
+                  }
+              },
+              "color": {
+                  "value": "#ffffff"
+              },
+              "shape": {
+                  "type": "circle",
+                  "stroke": {
+                      "width": 0,
+                      "color": "#000000"
+                  },
+                  "polygon": {
+                      "nb_sides": 5
+                  },
+                  "image": {
+                      "src": "img/github.svg",
+                      "width": 100,
+                      "height": 100
+                  }
+              },
+              "opacity": {
+                  "value": 1,
+                  "random": false,
+                  "anim": {
+                      "enable": false,
+                      "speed": 1,
+                      "opacity_min": 0.1,
+                      "sync": false
+                  }
+              },
+              "size": {
+                  "value": 3,
+                  "random": true,
+                  "anim": {
+                      "enable": false,
+                      "speed": 40,
+                      "size_min": 0.1,
+                      "sync": false
+                  }
+              },
+              "line_linked": {
+                  "enable": true,
+                  "distance": 150,
+                  "color": "#ffffff",
+                  "opacity": 0.4,
+                  "width": 1
+              },
+              "move": {
+                  "enable": true,
+                  "speed": 6,
+                  "direction": "none",
+                  "random": false,
+                  "straight": false,
+                  "out_mode": "out",
+                  "bounce": false,
+                  "attract": {
+                      "enable": false,
+                      "rotateX": 600,
+                      "rotateY": 1200
+                  }
+              }
+          },
+          "interactivity": {
+              "detect_on": "canvas",
+              "events": {
+                  "onhover": {
+                      "enable": true,
+                      "mode": "repulse"
+                  },
+                  "onclick": {
+                      "enable": true,
+                      "mode": "push"
+                  },
+                  "resize": true
+              },
+              "modes": {
+                  "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                          "opacity": 1
+                      }
+                  },
+                  "bubble": {
+                      "distance": 400,
+                      "size": 40,
+                      "duration": 2,
+                      "opacity": 8,
+                      "speed": 3
+                  },
+                  "repulse": {
+                      "distance": 200,
+                      "duration": 0.4
+                  },
+                  "push": {
+                      "particles_nb": 4
+                  },
+                  "remove": {
+                      "particles_nb": 2
+                  }
+              }
+          },
+          "retina_detect": true
+      });
+  </script>
+</body>
+</html>

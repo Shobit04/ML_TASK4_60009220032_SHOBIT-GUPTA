@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure that the content stretches to at least the height of the viewport */
+}
+/* Animation */
+@keyframes animateBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(to bottom right, #74b8f8, #f7aef8); /* Adjust gradient colors as needed */
+    animation: animateBackground 10s linear infinite alternate;
+}
+
+
+header {
+    background-color: rgba(226, 128, 209, 0.8);; /* Dark gray header background */
+    color: #fff; /* White text */
+    padding: 20px;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Align items at the ends */
+    align-items: center; /* Vertically center items */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Display items horizontally */
+}
+
+nav ul li:first-child {
+    margin-right: 990px; /* Create space between the items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.container {
+    flex: 1; /* Fill remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    margin-top: 50px; /* Adjust margin-top as needed */
+}
+
+.card {
+    background-color: #fff; /* White card background */
+    padding: 50px; /* Increased padding */
+    border-radius: 20px; /* Increased border radius */
+    box-shadow: 0 4px 800px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    max-width: 600px; /* Maximum width of the card */
+    width: 90%; /* Adjust width as needed */
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333; /* Dark gray button background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #555; /* Darker gray on hover */
+}
+
+.btn{
+    min-width: 200px;
+    height: 56px;
+    border-radius: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--clr-white);
+    transition: var(--transition-default);
+}
+
+.btn:hover{
+    color: var(--clr-white);
+    background-color: #1472f4;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.btn-primary{
+    background-color: var(--clr-blue);
+}
+.btn-primary-outline{
+    border: 1.4px solid var(--clr-blue);
+    color: var(--clr-blue);
+}
+.btn-secondary{
+    background-color: var(--clr-white);
+    color: var(--clr-blue);
+}
+.btn-white-outline{
+    color: var(--clr-white);
+    border: 1.4px solid var(--clr-white);
+}
+.btn-white-outline:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-blue);
+}
+
+/* title */
+.title-box .title-box-name{
+    font-weight: 700;
+    font-size: 36px;
+}
+.title-box .title-separator{
+    height: 2px;
+    background-color: var(--clr-black);
+    width: 56px;
+    margin-top: 10px;
+    margin-bottom: 33px;
+}
+footer {
+    background-color: rgb(99, 164, 244); /* Dark gray footer background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom of the page */
+}
